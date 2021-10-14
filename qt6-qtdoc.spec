@@ -3,7 +3,7 @@
 %define major 6
 
 %define _qtdir %{_libdir}/qt%{major}
-
+Summary:	Qt %{major} Documentation Tools
 Name:		qt6-qtdoc
 Version:	6.1.0
 Release:	%{?beta:0.%{beta}.}%{?snapshot:0.%{snapshot}.}1
@@ -14,7 +14,7 @@ Source:		qtdoc-%{?snapshot:%{snapshot}}%{!?snapshot:%{version}}.tar.zst
 Source:		http://download.qt-project.org/%{?beta:development}%{!?beta:official}_releases/qt/%(echo %{version}|cut -d. -f1-2)/%{version}%{?beta:-%{beta}}/submodules/qtdoc-everywhere-src-%{version}%{?beta:-%{beta}}.tar.xz
 %endif
 Group:		System/Libraries
-Summary:	Qt %{major} Documentation Tools
+License:	LGPLv3/GPLv3/GPLv2
 BuildRequires:	cmake
 BuildRequires:	ninja
 BuildRequires:	%{_lib}Qt%{major}Core-devel
@@ -23,8 +23,6 @@ BuildRequires:	%{_lib}Qt%{major}Network-devel
 BuildRequires:	%{_lib}Qt%{major}Qml-devel
 BuildRequires:	%{_lib}Qt%{major}QmlDevTools-devel
 BuildRequires:	%{_lib}Qt%{major}QmlModels-devel
-BuildRequires:	%{_lib}Qt%{major}QmlQuick-devel
-BuildRequires:	%{_lib}Qt%{major}QmlQuickWidgets-devel
 BuildRequires:	%{_lib}Qt%{major}Xml-devel
 BuildRequires:	%{_lib}Qt%{major}Widgets-devel
 BuildRequires:	%{_lib}Qt%{major}QmlDevTools-devel
@@ -43,10 +41,9 @@ BuildRequires:	cmake(Clang)
 # Not really required, but referenced by LLVMExports.cmake
 # (and then required because of the integrity check)
 BuildRequires:	%{_lib}gpuruntime
-License:	LGPLv3/GPLv3/GPLv2
 
 %description
-Qt %{major} documentation tools
+Qt %{major} documentation tools.
 
 %prep
 %autosetup -p1 -n qtdoc%{!?snapshot:-everywhere-src-%{version}%{?beta:-%{beta}}}
