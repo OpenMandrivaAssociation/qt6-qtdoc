@@ -1,11 +1,11 @@
-#define beta rc
+%define beta beta2
 #define snapshot 20200627
 %define major 6
 
 %define _qtdir %{_libdir}/qt%{major}
 Summary:	Qt %{major} Documentation Tools
 Name:		qt6-qtdoc
-Version:	6.2.3
+Version:	6.4.0
 Release:	%{?beta:0.%{beta}.}%{?snapshot:0.%{snapshot}.}1
 %if 0%{?snapshot:1}
 # "git archive"-d from "dev" branch of git://code.qt.io/qt/qtbase.git
@@ -29,7 +29,6 @@ BuildRequires:	%{_lib}Qt%{major}OpenGLWidgets-devel
 BuildRequires:	%{_lib}Qt%{major}DBus-devel
 BuildRequires:	qt%{major}-cmake
 BuildRequires:	qt%{major}-qtdeclarative
-BuildRequires:	qt%{major}-qtdeclarative-devel
 BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(xkbcommon)
 BuildRequires:	pkgconfig(vulkan)
