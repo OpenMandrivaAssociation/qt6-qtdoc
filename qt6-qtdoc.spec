@@ -36,6 +36,7 @@ BuildRequires:	cmake(Qt%{major}Quick)
 BuildRequires:	cmake(Qt%{major}QuickControls2)
 BuildRequires:	cmake(Qt%{major}QuickTemplates2)
 BuildRequires:	cmake(Qt%{major}Multimedia)
+BuildRequires:	cmake(Qt%{major}Svg)
 BuildRequires:	qt%{major}-cmake
 BuildRequires:	qt%{major}-qtdeclarative
 BuildRequires:	pkgconfig(gl)
