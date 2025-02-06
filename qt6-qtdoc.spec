@@ -5,7 +5,7 @@
 %define _qtdir %{_libdir}/qt%{major}
 Summary:	Qt %{major} Documentation Tools
 Name:		qt6-qtdoc
-Version:	6.8.1
+Version:	6.8.2
 Release:	%{?beta:0.%{beta}.}%{?snapshot:0.%{snapshot}.}1
 %if 0%{?snapshot:1}
 # "git archive"-d from "dev" branch of git://code.qt.io/qt/qtbase.git
