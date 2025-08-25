@@ -18,6 +18,7 @@ License:	LGPLv3/GPLv3/GPLv2
 BuildRequires:	cmake
 BuildRequires:	ninja
 BuildRequires:	cmake(Qt%{major}Core)
+BuildRequires:	cmake(Qt%{major}Concurrent)
 BuildRequires:	cmake(Qt%{major}Gui)
 BuildRequires:	cmake(Qt%{major}Network)
 BuildRequires:	cmake(Qt%{major}Xml)
