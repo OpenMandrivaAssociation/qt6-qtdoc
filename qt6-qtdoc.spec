@@ -46,12 +46,11 @@ BuildRequires:	pkgconfig(vulkan)
 BuildRequires:	pkgconfig(openssl)
 BuildRequires:	cmake(LLVM)
 BuildRequires:	cmake(Clang)
-BuildRequires:	cmake(Qt6Test)
-BuildRequires:	cmake(Qt6QuickControls2)
-BuildRequires:	cmake(Qt6QmlXmlListModel)
-# Not really required, but referenced by LLVMExports.cmake
-# (and then required because of the integrity check)
-BuildRequires:	%{_lib}gpuruntime
+# For examples
+BuildRequires:	cmake(Qt%{major}WebSockets)
+BuildRequires:	cmake(Qt%{major}Positioning)
+BuildRequires:	cmake(Qt%{major}Location)
+BuildRequires:	pkgconfig(libzstd)
 
 %description
 Qt %{major} documentation tools.
