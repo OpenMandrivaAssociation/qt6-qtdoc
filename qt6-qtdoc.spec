@@ -89,6 +89,6 @@ export LD_LIBRARY_PATH="$(pwd)/build/lib:${LD_LIBRARY_PATH}"
 %qt6_postinstall
 
 %files
-%{_libdir}/qt6/examples/*
+%optional %{_libdir}/qt6/examples/*
 %{_qtdir}/mkspecs/qtdoc_dummy_file.txt
 %{_qtdir}/sbom/*
