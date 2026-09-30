@@ -71,6 +71,7 @@ Qt %{major} documentation tools.
 # FIXME why are OpenGL lib paths autodetected incorrectly, preferring
 # /usr/lib over /usr/lib64 even on 64-bit boxes?
 %cmake -G Ninja \
+	-DQT_BUILD_TESTS:BOOL=OFF \
 	-DCMAKE_INSTALL_PREFIX=%{_qtdir} \
 	-DBUILD_EXAMPLES:BOOL=ON \
 	-DBUILD_SHARED_LIBS:BOOL=ON \
